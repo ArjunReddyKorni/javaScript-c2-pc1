@@ -25,16 +25,18 @@ function calculateWeightedAverage(assignmentScore,projectScore,quizScore,midTerm
     midTermPercentScore = (midTermWight/100) * midTermScore;
     finalExamPercentScore = (finalExamWeight/100) * finalExamScore;
      var overallPercentage = assignmentPercentScore + projectPercentScore + quizPercentScore + midTermPercentScore + finalExamPercentScore;
+     
+    return overallPercentage;
+}
+
+
+//calling functions
+      let averageWeight = calculateWeightedAverage(97, 82, 60, 75, 80)
      console.log('Weights      % Value of Score');
      console.log('Assignments     ' + parseInt(assignmentPercentScore));
      console.log('Projects        ' + projectPercentScore);
      console.log('Quizzes         ' + quizPercentScore);
      console.log('Mid Term        ' + midTermPercentScore);
      console.log('Final Exam      ' + finalExamPercentScore);
-    return overallPercentage;
-}
 
-
-//calling functions
-
-console.log(`The weighted average score is : ${calculateWeightedAverage(97, 82, 60, 75, 80)}`);
+console.log(`The weighted average score is : ${averageWeight}`);
